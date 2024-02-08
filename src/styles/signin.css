@@ -1,0 +1,21 @@
+.container {
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  .button {
+    width: 60%;
+    margin-left: 60px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
