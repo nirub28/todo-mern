@@ -1,0 +1,284 @@
+/* ImagePopup.module.css */
+.imagePopupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .imagePopup {
+    background-color: white;
+    width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    padding: 10px;
+  }
+  
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .userInfo {
+    flex: 1;
+    padding: 10px;
+  }
+  
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.userProfilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.caption {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.comments {
+  margin-top: 10px;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.commentUserProfilePic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.commentUsername {
+  font-size: 14px;
+  font-weight: bold;
+}
+.commentUsername:hover {
+  cursor: pointer;
+  font-size: 14px;
+  color: #777;
+  font-weight: bold;
+}
+
+.commentText {
+  font-size: 14px;
+}
+
+.likesAndComments {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.likesIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.commentsIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.commentForm {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.commentInput {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.commentSubmit {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.noComments {
+  font-size: 14px;
+  margin-top: 10px;
+  
+}
+
+.commentsSection {
+  margin-top: 10px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; */
+  height: 250px;
+  overflow-y: auto;
+}
+
+.noComments {
+  font-size: 14px;
+  margin-top: 50px;
+  text-align: center; 
+}
+
+.startConversation {
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: center; 
+}
+
+hr {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 35px;
+  color: red;
+}
+
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align elements to the left */
+}
+
+.commentUser {
+  display: flex;
+  align-items: center;
+}
+
+.commentOptions {
+  display: flex;
+  align-items: center;
+}
+
+.commentOptionsDots {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px; /* Add some spacing between comment text and dots */
+}
+
+.commentTime {
+  font-size: 12px;
+  color: #777; /* Adjust the color to your preference */
+}
+
+
+/* Add this to your existing CSS or create a new CSS file */
+
+.commentPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  z-index: 1001;
+  color: white;
+}
+
+.commentPopupButtons {
+  margin-top: 20px;
+}
+
+.commentDelete, .commentCancel {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.commentDelete {
+  background-color: #ff0000; /* Red color for delete button */
+  margin-bottom: 10px;
+}
+
+.commentCancel {
+  background-color: #007bff; /* Blue color for cancel button */
+}
+
+.commentDelete:hover, .commentCancel:hover {
+  background-color: #ff6666; /* Light red for delete button, light blue for cancel button on hover */
+}
+
+.likesAndComments {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.likesIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.commentsIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.postDate {
+  font-size: 14px;
+  color: #888;
+}
+
+.myDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.likesIcon:hover{
+  cursor: pointer;
+}

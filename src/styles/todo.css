@@ -1,39 +1,62 @@
-.container {
-    max-width: 600px;
+
+  .todo-list-container {
+    width: 700px;
     margin: 0 auto;
-    text-align: center; 
+  }
+  .input-todo{
+    width: 180px;
+    height: 30px;
+  }
+
+  .input-todo-btn{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  .input-container {
-    margin-bottom: 20px; 
+  .add-todo {
+    margin-bottom: 10px;
   }
   
-  input[type="text"] {
+  .todo-item {
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 5px;
+    height: 50px;
+    width: 100%;
+  }
+  .todo-item span{
+    font-size:large;
+  }
+  
+  .todo-item.completed span{
+    text-decoration: line-through;
+  }
+  
+  .todo-item button {
+    margin-left: auto;
+  }
+  
+  .todo-item + .todo-item {
+    margin-top: 5px; 
+  }
+
+  .todo-item input[type="checkbox"] {
+    transform: scale(1.5); 
     margin-right: 10px;
   }
   
-  button {
-    margin-top: 10px;
+  .todo-item {
+    transition: background-color 0.2s ease;
   }
   
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0; 
+  .todo-item.dragging {
+    background-color: lightslategray; 
   }
-  
-  li {
-    background-color: #f0f0f0;
-    padding: 10px;
-    margin-bottom: 5px;
-    text-align: left;
-  }
-  
-  li:hover {
-    background-color: #e0e0e0;
-  }
-  
-  button {
-    margin-left: 10px;
-  }
-  

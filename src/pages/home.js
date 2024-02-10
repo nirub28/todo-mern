@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/home.css'; 
+import '../styles/home.css';
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
   return (
     <div className="container">
       <h2>Welcome to ToDo App</h2>

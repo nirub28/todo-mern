@@ -1,0 +1,126 @@
+/* messages.module.css */
+
+.messageContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.conversationList {
+  width: 200px;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+}
+
+.selectedUser {
+  background-color: gray;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Align items vertically in the selectedUser div */
+
+}
+
+.chatBox {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh; /* Set chat box height to fill the entire viewport height */
+  position: relative;
+}
+
+.chatContent {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.profilepicc {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+.messageInput {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Message input field */
+.messageInput input {
+  flex: 1; /* Takes up remaining space */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+/* Send button */
+.messageInput button {
+  background-color: #4caf50; /* Your desired color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.messageInput button:hover {
+  cursor: pointer;
+  color: black;
+}
+
+/* Add spacing between messages */
+.message {
+  margin: 10px 0; /* Add vertical margin to create separation between messages */
+  clear: both; /* Ensure each message starts on a new line */
+  max-width: 100%; /* Limit the message width to a percentage of the container */
+}
+
+
+/* Style for sent messages */
+.sentMessage {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  float: right; /* Float sent messages to the right */
+  position: relative;
+}
+
+/* Style for received messages */
+.receivedMessage {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  float: left; /* Float received messages to the left */
+  clear: both; /* Ensure they don't overlap with the previous message */
+}
+
+.timestamp {
+  display: block; /* Place the timestamp on a new line */
+  font-size: 12px; /* Adjust font size as needed */
+  color: black; /* A subtle color for the timestamp */
+}
+
+.username {
+  margin-left: 20px;
+  font-size: larger;
+}
+
+.dateContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.date {
+  background-color: rgb(68, 66, 66);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

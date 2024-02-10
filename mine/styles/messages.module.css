@@ -1,0 +1,188 @@
+/* messages.module.css */
+
+.messageContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .conversationList {
+    width: 200px;
+    border-right: 1px solid #ccc;
+    padding: 10px;
+
+  }
+  
+  .selectedUser {
+    background-color: gray;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .chatBox {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh; /* Set chat box height to fill the entire viewport height */
+    
+  }
+  
+  .messages {
+    flex: 1;
+    overflow-y: auto; /* Allow vertical scrolling if messages exceed the container height */
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order of messages for better scrolling */
+    
+  }
+  
+.messageInput {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Message input field */
+.messageInput input {
+  flex: 1; /* Takes up remaining space */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  outline: none;
+}
+
+/* Send button */
+.messageInput button {
+  background-color: #4CAF50; /* Your desired color */ 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.messageInput button:hover{
+  cursor: pointer;
+  color: black;
+}
+
+/* Style for sent messages */
+.sentMessage {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  float: right; /* Float sent messages to the right */
+  clear: both; /* Ensure they don't overlap with the previous message */
+}
+
+/* Style for received messages */
+.receivedMessage {
+  background-color: gray;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  float: left; /* Float received messages to the left */
+  clear: both; /* Ensure they don't overlap with the previous message */
+}
+
+/* Add spacing between messages */
+.message {
+  margin: 10px 0; /* Add vertical margin to create separation between messages */
+  clear: both; /* Ensure each message starts on a new line */
+  max-width: 60%; /* Limit the message width to a percentage of the container */
+  
+}
+
+.timestamp {
+  display: block; /* Place the timestamp on a new line */
+  font-size: 12px; /* Adjust font size as needed */
+  color: black; /* A subtle color for the timestamp */
+}
+
+
+
+
+
+
+
+
+
+/* styles.module.css */
+
+.messageContainer {
+  display: flex;
+  
+}
+
+.conversationList {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  
+}
+
+.username {
+  font-weight: bold;
+  font-size: larger;
+}
+
+.messageContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.messageContainer li {
+  margin-bottom: 10px;
+}
+
+.messageContainer a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.messageContainer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+
+.litag:hover{
+  background-color: lightgray;
+}
+
+
+.messageContent {
+  margin-top: 60px;
+  margin-left: -25px; 
+  font-size: 14px; 
+  color: #333;
+  
+}
+
+.dateContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.date{
+  background-color: rgb(243, 26, 26);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  /* margin-left: -50%; */
+  align-self: center; 
+}
+.messageBubble {
+  margin: 5px 0; /* Adjust margin for better spacing between messages */
+  margin-top: 60px;
+
+}
+

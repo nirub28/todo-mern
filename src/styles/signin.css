@@ -19,3 +19,16 @@
     cursor: pointer;
   }
   
+  .container .signup-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .signup-link{
+    margin-top: 35px;
+  }
+  
+  .container .signup-link a:hover {
+    text-decoration: underline; 
+  }
+  

@@ -1,0 +1,93 @@
+/* styles/home.module.css */
+
+.profile {
+  padding: 20px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.userProfilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.postImage {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  max-height: 95vh;
+}
+
+.likesAndComments {
+  margin-top: 20px;
+}
+
+.likesCount {
+  margin-top: 5px;
+}
+
+.caption {
+  margin-top: 10px;
+}
+
+.post {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 10px;
+  max-width: 500px; /* Set a maximum width for the post container */
+  background-color: lightgray;
+}
+
+.postImage {
+  max-width: 100%; /* Limit the image size to fit within the post container */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure images do not exceed the container width */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+.likesIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.commentsIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: -20px;
+  cursor: pointer;
+}
+
+.postUsername {
+  font-weight: bold;
+  margin-top: 100px;
+}
+.lastDiv {
+  margin-top: 10px;
+}
+
+.commentUsername:hover {
+  cursor: pointer;
+  color: #777;
+}
