@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import "../styles/signup.css";
+import BASE_URL from "../utils/config";
+
 
 import { toast } from "react-toastify"; // to add notifications
 import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
-  const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -29,7 +29,7 @@ const SignUp = () => {
     // const responseData="";
     try {
       // Make API call to add user
-      const response = await fetch("http://localhost:8000/auth/signup", {
+      const response = await fetch(`${BASE_URL}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,6 +68,7 @@ const SignUp = () => {
           placeholder="Username"
           className="input"
           value={username}
+          required
           onChange={handleUsernameChange}
         />
         <input
@@ -75,6 +76,7 @@ const SignUp = () => {
           placeholder="Password"
           className="input"
           value={password}
+          required
           onChange={handlePasswordChange}
         />
         <input
@@ -82,6 +84,7 @@ const SignUp = () => {
           placeholder="Confirm Password"
           className="input"
           value={confirmPassword}
+          required
           onChange={handleConfirmPasswordChange}
         />
         <button type="submit" className="button">

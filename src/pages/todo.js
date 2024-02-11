@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import BASE_URL from "../utils/config";
 import {
   addTask,
   deleteTask,
@@ -31,7 +32,7 @@ const TodoPage = () => {
   const fetchTodos = async (username) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/todo/todos/${username}`
+        `${BASE_URL}/todo/todos/${username}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -48,7 +49,7 @@ const TodoPage = () => {
   const addTodo = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/todo/add/${username}`,
+        `${BASE_URL}/todo/add/${username}`,
         {
           method: "POST",
           headers: {
@@ -73,7 +74,7 @@ const TodoPage = () => {
   const deleteTodo = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/todo/delete/${id}?username=${username}`,
+        `${BASE_URL}/todo/delete/${id}?username=${username}`,
         {
           method: "DELETE",
         }
@@ -92,7 +93,7 @@ const TodoPage = () => {
   const toggleTodoCompletion = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/todo/complete/${id}?username=${username}`,
+        `${BASE_URL}/todo/complete/${id}?username=${username}`,
         {
           method: "PUT",
           headers: {
@@ -119,7 +120,7 @@ const TodoPage = () => {
     updatedTodos.splice(result.destination.index, 0, reorderedTodo);
 
     try {
-      await fetch(`http://localhost:8000/todo/updateOrder/${username}`, {
+      await fetch(`${BASE_URL}/todo/updateOrder/${username}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

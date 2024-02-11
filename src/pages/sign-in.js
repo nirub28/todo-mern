@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { LOGIN } from '../actions'; 
 import '../styles/signin.css';
 import { toast } from 'react-toastify';
+import BASE_URL from "../utils/config";
+
 
 const SignIn = () => {
   const dispatch = useDispatch();
@@ -10,12 +12,12 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const user = useSelector(state => state.user); 
 
-  // console.log("user det are", user);
+  // console.log("base url is", BASE_URL);
 
   useEffect(() => {
     // Check if user data is present in the store
     if (user.isLoggedIn) {
-      // User data is present, redirect to the todo application
+      // User already logged in, redirect to the todo application
       window.location.href = "/todo";
     }
   }, [user]);
@@ -24,7 +26,7 @@ const SignIn = () => {
   const signIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/auth/login', {
+      const response = await fetch(`${BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -82,6 +84,7 @@ const SignIn = () => {
           placeholder="Username"
           className='input'
           value={username}
+          required
           onChange={(e) => setUsername(e.target.value)}
         />
         <input
@@ -89,6 +92,7 @@ const SignIn = () => {
           placeholder="Password"
           className='input'
           value={password}
+          required
           onChange={(e) => setPassword(e.target.value)}
         />
         <button type="submit" className='button'>Login</button>
